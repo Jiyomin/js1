@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    var obj1{
+        name = 'lihua',
+        sex = 男
+    }
+    var obj2{
+        name = 'zhangli',
+        age = 14
+    }
+    function extend(target,obj){
+        //var newObj  = ();
+        for(var p in obj){
+            if(typeof obj[p === 'object'){
+                target[p] = extend(obj[p]);
+            }else{
+                target[p] = obj[p];
+            }
+        }return target;
+    }
+    var o2 = target(obj1);
+    console.log(o2);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+<!-- 鼠标移入oBigPic.onmouseover = function(){}
+     鼠标移出oBigPic.onmouseout = function(){}
+     鼠标移动oBigPic.onmousemove = function(){}
+
+     事件冒泡：
+     oDiv1.onclick = function(){alert(1)};
+     oDiv1.onclick = function(){alert(2)};
+     (此种方法第一句会被覆盖掉)
+     oDiv1.addEventListener("click",function(){alert(1)});
+     oDiv1.addEventListener("click",function(){alert(2)});
+     (此种方法两句都会显示，不过有兼容性问题。早期IE只支持事件冒泡不支持事件捕获。)
+
+      oDiv1.addEventListener("click",function(){alert(1)},false);
+      oDiv2.addEventListener("click",function(){alert(2)},false);
+      oDiv3.addEventListener("click",function(){alert(3)},false);
+      (默认为false 称作事件冒泡 true则称为事件捕获，输出与false相反。事件发生的顺序是先捕获后冒泡！！！)
+
+      阻止事件冒泡：
+      oDiv1.addEventListener("click",function(e){
+      alert(1);
+      e.stopPropagation();
+      },false);
+      oDiv2.addEventListener("click",function(e){
+      alert(2);
+      e.stopPropagation();
+      },false);
+      oDiv3.addEventListener("click",function(e){
+      alert(3);
+      e.stopPropagation();
+      },false);
+      (e也有兼容性问题，不过此处讨论的是标准浏览器所以就不做考虑了)
+
+      早期IE事件冒泡：attachEvent(on+type)
+            阻止事件冒泡：window.event.cancelBubble
+
+      事件代理/事件委托：利用事件冒泡把子元素的同一事件委托给父元素绑定。
+
+
+-->
