@@ -5,8 +5,9 @@
     <title></title>
 </head>
 <body>
+<button id="btn">click</button>
     <script>
-        <button id="btn">click</button>
+
         //获取元素：document.getElementById('aa');返回一个对象
         //context.getElementsByTagName('li');返回多个对象
         //context.getElementsByClassName('aa');
@@ -19,9 +20,41 @@
             alert('haha';)
         }
 
+
+//遍历
+        //children chirdnodes sibings
+
+        function sibings(elem){
+            var arr = [];
+            var elements = elem.parentNode.children;
+            for(var i=0;i<elements.length;i++){
+                if(elements[i] != elem){
+                    arr.push(elements[i]);
+                }
+            }
+            return arr;
+        }
+        console.log(sibings(oH1))
+
+
+
+//删除     oDiv1.removeChild(oH1);
+        function remove(elem){
+            elem.parentNode.removeChild(elem)
+        }
+//在前面插入     oDiv1.insertBeforeChild(newElem,elem);
+//在后面插入     先判断他有没有下一个兄弟 如果有，则在他的下一个兄弟前面插，如果没有，则在他的父元素上插
+        function after(elem,newNode){
+            if(elem.nextSibling){
+                before(elem.nextSibling,newNode);
+            }else{
+                elem.parentNode.appendChild(newNode);
+            }
+        }
     </script>
 </body>
 </html>
 
 
-<!--Js对象有三种：内置对象-->
+<!--Js对象有三种：内置对象 自定义 DOM
+    DOM操作：元素查找 元素遍历 元素操纵
